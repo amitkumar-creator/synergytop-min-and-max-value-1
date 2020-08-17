@@ -5,28 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>min and max</title>
     <script>
-        //minimum number
-        let min = (array, min = array[0])=>{
-            for(let i = 0; i<array.length; i++){
-                if(min > array[i])min = array[i];
-            }
-            return min;
+        // //minimum number
+        // let min = (array, min = array[0])=>{
+        //     for(let i = 0; i<array.length; i++){
+        //         if(min > array[i])min = array[i];
+        //     }
+        //     return min;
+        // }
+        // //maximum number
+        // let max = (array, max = array[0])=>{
+        //     for(let i = 0; i<array.length; i++){
+        //         if(max < array[i])max = array[i];
+        //     }
+        //     return max;
+        // }
+        // const arr = [5, 2, 7, 9, 13, 3, 8]
+        // console.log("minimum value is " + min(arr));
+        // console.log("maximum value is " + max(arr));
+        // document.write("minimum value is : " + min(arr) + "<br/>")
+        // document.write("maximum value is : " + max(arr))
+        var arr = [5, 2, 7, 9, 13, 3, 8];
+        function maxindexNo(array){
+           return array >= 13
         }
-        //maximum number
-        let max = (array, max = array[0])=>{
-            for(let i = 0; i<array.length; i++){
-                if(max < array[i])max = array[i];
-            }
-            return max;
+        function minIndexNo(array){
+          return array <= 2
         }
-        const arr = [5, 2, 7, 9, 13, 3, 8]
-        console.log("minimum value is " + min(arr));
-        console.log("maximum value is " + max(arr));
-        document.write("minimum value is : " + min(arr) + "<br/>")
-        document.write("maximum value is : " + max(arr))
+
+        // function myFunction(){
+        //   document.getElementById("demo").innerHTML = arr.findIndex(maxindexNo);
+        // }
+        function differenceIndex(){
+          document.getElementById("demo").innerHTML = arr.findIndex(maxindexNo) - arr.findIndex(minIndexNo);
+        }
     </script>
 </head>
 <body>
-    
+    <p id="demo"> </p>
+    <button onclick="differenceIndex()">Check Difference</button>
 </body>
 </html>
